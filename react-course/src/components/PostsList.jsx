@@ -10,7 +10,9 @@ function PostsList() {
     <>
       { posts.length > 0 && (
       <ul className={styles.posts}>
-        {posts.map((post) => <Post author={post.author} comment={post.comment} key={post.comment} />)}
+        {posts.map((post) => 
+          <Post id={post.id} author={post.author} comment={post.comment} key={post.id} />
+        )}
       </ul>
       )}
       { posts.length === 0 && (<p style={{ textAlign: 'center' }}>No posts here yet.</p>)}
